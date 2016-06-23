@@ -64,8 +64,9 @@
     ],
     "ignore": [
       { "matchValue": "scss", "dependenciesAny": ["html"] },
-      { "matchValue": "grunt-settings.js", "dependenciesAny": ["html"] },
-      { "matchValue": "Gruntfile.js", "dependenciesAny": ["html"] },
+      { "matchValue": "grunt-settings.js", "dependenciesAll": ["html"] },
+      { "matchValue": "Gruntfile.js", "dependenciesAll": ["html"] },
+	  
       { "matchValue": "scss/vendors/_normalize.scss", "dependenciesAny": ["bootstrap", "materialize"] },
       { "matchValue": "scss/base/_forms.scss", "dependenciesAny": ["bootstrap", "materialize"] },
       { "matchValue": "scss/base/_functions.scss", "dependenciesAny": ["bootstrap", "materialize"] },
