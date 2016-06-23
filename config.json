@@ -1,0 +1,84 @@
+{
+  "copyright": "\n********************************************\n* Marmik Desai *\n********************************************\n",
+  "updateMenu": [
+    { 
+      "question": "Select action:",
+      "caption": "Continue project",
+      "value": "project_continue",
+      "run": [
+        { "matchValue": "npm install", "fsNotExist": "markup/node_modules" },
+        "grunt"
+      ]
+    },
+    {
+      "caption": "Update project modules",
+      "value": "project_update",
+      "run": ["npm update"]
+    },
+    {
+      "caption": "Release project (ready for QA)",
+      "value": "project_dist",
+      "run": ["grunt dist"]
+    }
+  ],
+  "createMenu": [
+    {
+      "question": "Select HTML type:",
+      "caption": "Markup Only",
+      "value": "markup_only",
+      "menu": [
+        {
+          "question": "Select HTML Option:",
+          "caption": "HTML WITH SASS",
+          "value": "html_sass"
+        },
+        {
+          "caption": "HTML WITHOUT SASS",
+          "value": "html"
+        }
+      ]
+    },
+    {
+      "caption": "Markup + Framework",
+      "value": "markup_framework",
+      "menu": [
+        {
+		  "question": "Select framework:",
+          "caption": "Bootstrap",
+          "value": "bootstrap"
+        },
+        {
+          "caption": "Materialize",
+          "value": "materialize"
+        }
+      ]
+    }
+  ],
+  "data": {
+    "path": "markup",
+    "source": [
+      { "matchValue": "git://github.com/marmikdesai/sample-html.git", "excludeIf": ["html_sass"] },
+      { "matchValue": "git://github.com/marmikdesai/html-without-sass.git", "dependenciesAny": ["html"] },
+      { "matchValue": "git://github.com/marmikdesai/bootstrap.git", "dependenciesAny": ["bootstrap"] },
+      { "matchValue": "git://github.com/marmikdesai/materialize.git", "dependenciesAny": ["materialize"] }
+    ],
+    "ignore": [
+	  
+      { "matchValue": "scss/vendors/_normalize.scss", "dependenciesAny": ["bootstrap", "materialize"] },
+      { "matchValue": "scss/base/_forms.scss", "dependenciesAny": ["bootstrap", "materialize"] },
+      { "matchValue": "scss/base/_functions.scss", "dependenciesAny": ["bootstrap", "materialize"] },
+      { "matchValue": "scss/base/_typography.scss", "dependenciesAny": ["bootstrap", "materialize"] },
+	  
+      { "matchValue": "scss/base/_cms-reset.scss", "dependenciesAny":["bootstrap", "materialize"] },
+      { "matchValue": "scss/base/_variables.scss", "dependenciesAny":["bootstrap", "materialize"] },
+      { "matchValue": "scss/base/_reset.scss", "dependenciesAny":["bootstrap", "materialize"] }
+    ],
+    "rename": [
+    ],
+    "run": [
+      { "matchValue": "bower install" },
+      { "matchValue": "npm install" },
+      { "matchValue": "grunt" }
+    ]
+  }
+}
