@@ -57,8 +57,8 @@
   "data": {
     "path": "markup",
     "source": [
-      { "matchValue": "git://github.com/marmikdesai/html-without-sass.git", "dependenciesAny": ["common"] },
-      { "matchValue": "git://github.com/marmikdesai/sample-html.git", "excludeIf": ["html_sass"] },
+      { "matchValue": "git://github.com/marmikdesai/html-without-sass.git", "excludeIf": ["common"] },
+      { "matchValue": "git://github.com/marmikdesai/sample-html.git", "dependenciesAny": ["html_sass"] },
       { "matchValue": "git://github.com/marmikdesai/bootstrap.git", "dependenciesAny": ["bootstrap"] },
       { "matchValue": "git://github.com/marmikdesai/materialize.git", "dependenciesAny": ["materialize"] }
     ],
