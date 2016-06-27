@@ -35,6 +35,10 @@
         {
           "caption": "HTML WITHOUT SASS",
           "value": "html"
+        },
+        {
+          "caption": "HTML WITH LESS",
+          "value": "html_less"
         }
       ]
     },
@@ -58,6 +62,7 @@
     "path": "markup",
     "source": [
       { "matchValue": "git://github.com/marmikdesai/sample-html.git", "excludeIf": ["common"] },
+      { "matchValue": "git://github.com/marmikdesai/html-with-less.git", "dependenciesAny": ["html_less"] },
       { "matchValue": "git://github.com/marmikdesai/html-without-sass.git", "dependenciesAny": ["html"] },
       { "matchValue": "git://github.com/marmikdesai/bootstrap.git", "dependenciesAny": ["bootstrap"] },
       { "matchValue": "git://github.com/marmikdesai/materialize.git", "dependenciesAny": ["materialize"] }
