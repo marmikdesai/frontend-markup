@@ -68,7 +68,7 @@
       { "matchValue": "git://github.com/marmikdesai/materialize.git", "dependenciesAny": ["materialize"] }
     ],
     "ignore": [
-      { "matchValue": "scss", "dependenciesAny": ["html"] },
+      { "matchValue": "scss", "dependenciesAny": ["html", "html_less"] },
 	  
       { "matchValue": "scss/vendors/_normalize.scss", "dependenciesAny": ["bootstrap", "materialize"] },
       { "matchValue": "scss/base/_forms.scss", "dependenciesAny": ["bootstrap", "materialize"] },
